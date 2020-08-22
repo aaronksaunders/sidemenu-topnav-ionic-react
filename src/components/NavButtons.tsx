@@ -7,8 +7,11 @@ export const NavButtons = () => {
   });
 
   useEffect(() => {
-    window.matchMedia("(min-width: 768px)").addListener(setMQuery);
-  },[]);
+    let mediaQuery = window.matchMedia("(min-width: 768px)");
+    mediaQuery.addListener(setMQuery);
+
+    return () => mediaQuery.removeListener(setMQuery);
+  }, []);
 
   // MediaQueryListEvent { isTrusted: true, media: "(min-width: 768px)", matches: true ...}
   console.log(mQuery.matches);
