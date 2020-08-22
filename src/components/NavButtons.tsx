@@ -3,14 +3,15 @@ import React, { useEffect } from "react";
 
 export const NavButtons = () => {
   const [mQuery, setMQuery] = React.useState<any>({
-    matches: window.innerWidth < 768 ? true : false,
+    matches: window.innerWidth > 768 ? true : false,
   });
 
   useEffect(() => {
     window.matchMedia("(min-width: 768px)").addListener(setMQuery);
-  }, []);
+  });
 
   // MediaQueryListEvent { isTrusted: true, media: "(min-width: 768px)", matches: true ...}
+  console.log(mQuery.matches);
 
   return (
     <div>
