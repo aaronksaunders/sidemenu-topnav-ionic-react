@@ -3,12 +3,12 @@ import React from 'react';
 import './Home.css';
 import { NavButtons } from '../components/NavButtons';
 
-const Home: React.FC = () => {
+const PageOne: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>HOME</IonTitle>
+          <IonTitle>PAGE ONE</IonTitle>
           <IonButtons slot="end">
             <NavButtons/>
           </IonButtons>
@@ -20,4 +20,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default PageOne;
